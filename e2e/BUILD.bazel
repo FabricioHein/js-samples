@@ -9,9 +9,10 @@ load("//samples:samples.bzl", "OUTPUTS")
             "selenium.test.js",
             "//:jest.config.js",
             output,
-            "@npm//selenium-webdriver",
             "@npm//glob",
+            "@npm//selenium-webdriver",
         ],
+        tags = ["exclusive"],
         templated_args = [
             "--no-cache",
             "--no-watchman",
